@@ -19,6 +19,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.life.boot'
 version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -26,7 +27,9 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+
 }
 
 test {
