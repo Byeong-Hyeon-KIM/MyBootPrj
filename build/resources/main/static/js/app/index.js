@@ -8,6 +8,11 @@ var main = {
        $('#btn-update').on('click', function() {
            _this.update();
         });
+
+        $('#btn-delete').on('click', function() {
+            alert('aaa');
+            _this.delete();
+        });
     },
     save : function() {
 
@@ -51,6 +56,22 @@ var main = {
                }).fail(function(error) {
                    alert(JSON.stringify(error));
                });
+    },
+
+    delete : function() {
+
+        var id   = $('#id').val();
+        $.ajax({
+            type : 'DELETE',
+            url  : '/api/v1/posts/' + id,
+            dataType : 'json',
+            contentType : 'application/json; charset=utf-8'
+        }).done(function() {
+            alert('complete');
+            window.location.href = '/';
+        }).fail(function(error) {
+            alert(JSON.stringify(error));
+        });
     }
 };
 

@@ -48,4 +48,13 @@ public class PostsService {
                 .map(PostsResponseDto::new)
                 .collect(Collectors.toList());
     }
+
+    @Transactional
+    public void delete (Long id) {
+        Posts posts = postsRepository.findById(id)
+                .orElseThrow(() -> new
+                IllegalArgumentException("bbs Not Found ( id = " + id));
+
+        postsRepository.delete(posts);
+    }
 }
