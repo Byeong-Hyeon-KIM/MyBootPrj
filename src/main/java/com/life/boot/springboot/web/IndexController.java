@@ -1,5 +1,6 @@
 package com.life.boot.springboot.web;
 
+import com.life.boot.springboot.config.auth.LoginUser;
 import com.life.boot.springboot.config.auth.dto.SessionUser;
 import com.life.boot.springboot.service.posts.PostsService;
 import com.life.boot.springboot.web.dto.PostsResponseDto;
@@ -16,12 +17,12 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
+    /* 원래는 httpSession.getAttribute("user")로 세션정보를 매번 가져와야 했지만 */
+    /* LoginUser 어노테이션을 생성한다면 이거만 사용하면 세션 정보를 가져올 수 있음  */
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if ( user != null ) {
             model.addAttribute("userName", user.getName());
