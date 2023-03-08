@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.life.boot.springboot.ProfileControllerUnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-02-28T09:05:33" hostname="DESKTOP-LS01TOA" time="0.001">
+<testsuite name="com.life.boot.springboot.ProfileControllerUnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-07T23:43:20" hostname="DESKTOP-LS01TOA" time="0.002">
   <properties/>
   <testcase name="real_profile이_없으면_첫_번째가_조회된다" classname="com.life.boot.springboot.ProfileControllerUnitTest" time="0.001"/>
   <testcase name="active_profile이_없으면_default가_조회된다" classname="com.life.boot.springboot.ProfileControllerUnitTest" time="0.0"/>
-  <testcase name="real_profile이_조회된다" classname="com.life.boot.springboot.ProfileControllerUnitTest" time="0.0"/>
+  <testcase name="real_profile이_조회된다" classname="com.life.boot.springboot.ProfileControllerUnitTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
