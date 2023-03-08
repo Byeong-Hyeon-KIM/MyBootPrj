@@ -28,3 +28,6 @@ replay_pid*
 
 #googleLogin
 application-oauth.properties
+
+#로컬 db테스트용 인포
+application.properties
