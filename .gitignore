@@ -31,3 +31,7 @@ application-oauth.properties
 
 #로컬 db테스트용 인포
 application.properties
+
+#빌드 폴더
+out
+build
